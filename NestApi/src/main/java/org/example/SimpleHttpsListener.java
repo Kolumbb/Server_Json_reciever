@@ -94,7 +94,7 @@ public class SimpleHttpsListener {
                 sendToTargetHost(transformedData);
 
                 // Ustawienie nagłówka "Connection: close", aby zamknąć połączenie po zakończeniu
-                exchange.getResponseHeaders().set("Connection", "close");
+                //exchange.getResponseHeaders().set("Connection", "close");
 
                 // Odpowiedź
                 String response = "Dane odebrane i przetworzone\n";
