@@ -2,15 +2,11 @@ package org.example;
 
 import com.sun.net.httpserver.*;
 
-import javax.net.ssl.*;
 import java.io.*;
-import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.security.KeyStore;
 
 public class SimpleHttpsListener {
 
@@ -62,15 +58,13 @@ public class SimpleHttpsListener {
         server.setExecutor(null); // Domyślny executor
         server.start();
 
-        System.out.println("Serwer nasłuchuje na porcie: " + port);
+        System.out.println("Server is listening on port: " + port);
     }
 
     static class MyHandler implements HttpHandler {
-        private final String targetHost;
         private final String saveDirectory;
 
         public MyHandler(String targetHost, String saveDirectory) {
-            this.targetHost = targetHost;
             this.saveDirectory = saveDirectory;
         }
 
@@ -87,17 +81,9 @@ public class SimpleHttpsListener {
                 String fileName = saveDirectory + "request_" + System.currentTimeMillis() + ".json";
                 Files.write(Paths.get(fileName), (body + "\n").getBytes(StandardCharsets.UTF_8));
 
-                // Przekształcanie danych (np. dodanie prefiksu)
-                String transformedData = "Processed: " + body;
-
-                // Przekazywanie danych do hosta docelowego
-                sendToTargetHost(transformedData);
-
-                // Ustawienie nagłówka "Connection: close", aby zamknąć połączenie po zakończeniu
-                //exchange.getResponseHeaders().set("Connection", "close");
 
                 // Odpowiedź
-                String response = "Dane odebrane i przetworzone\n";
+                String response = "Data received\n";
                 exchange.sendResponseHeaders(200, response.getBytes().length);
                 OutputStream os = exchange.getResponseBody();
                 os.write(response.getBytes(StandardCharsets.UTF_8));
@@ -112,22 +98,6 @@ public class SimpleHttpsListener {
                 exchange.getResponseBody().close();
                 exchange.close();
             }
-        }
-
-
-        private void sendToTargetHost(String data) throws IOException {
-            URL url = new URL(targetHost);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setDoOutput(true);
-            conn.setRequestMethod("POST");
-            conn.setRequestProperty("Content-Type", "application/json");
-
-            try (OutputStream os = conn.getOutputStream()) {
-                os.write(data.getBytes(StandardCharsets.UTF_8));
-            }
-
-            int responseCode = conn.getResponseCode();
-            System.out.println("Przekazano dane na host docelowy, kod odpowiedzi: " + responseCode);
         }
     }
 }
