@@ -5,6 +5,8 @@ import com.sun.net.httpserver.HttpServer;
 import java.net.InetSocketAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class NestApiServer {
 
@@ -12,6 +14,8 @@ public class NestApiServer {
         // Server configuration
         int port = 8443; // Chosen port
         String saveDirectory = "./received_json/"; // Directory for saving JSON files
+        //Add logs to the system
+        MyLogger myLogger = new MyLogger("NestApiServer.log");
 
         // Creating a folder for JSON files (if not exist)
         Files.createDirectories(Paths.get(saveDirectory));
@@ -52,11 +56,12 @@ public class NestApiServer {
 //        });
 
         // Handler configuration for request handling
-        server.createContext("/api", new MyHandler(saveDirectory));
+        server.createContext("/api", new MyHandler(saveDirectory, myLogger));
         server.setExecutor(null); // Default executor
         server.start();
 
-        System.out.println("Server is listening on port: " + port);
+        myLogger.logInformation(Level.INFO, "Server started");
+        myLogger.logInformation(Level.INFO, "Server is listening on port: " + port);
 
     }
 
