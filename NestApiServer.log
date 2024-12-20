@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-12-20T12:28:22.192420Z</date>
+  <millis>1734697702192</millis>
+  <nanos>420000</nanos>
+  <sequence>0</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>1</thread>
+  <message>Server started</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:22.212688Z</date>
+  <millis>1734697702212</millis>
+  <nanos>688000</nanos>
+  <sequence>1</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>1</thread>
+  <message>Server is listening on port: 8443</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:31.001493Z</date>
+  <millis>1734697711001</millis>
+  <nanos>493000</nanos>
+  <sequence>2</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Connection initiated with IP: 0:0:0:0:0:0:0:1</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:31.012646Z</date>
+  <millis>1734697711012</millis>
+  <nanos>646000</nanos>
+  <sequence>3</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Data saved in ./received_json/request_1734697711004.json</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:31.038575Z</date>
+  <millis>1734697711038</millis>
+  <nanos>575000</nanos>
+  <sequence>4</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Response from client: 200</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:31.039372Z</date>
+  <millis>1734697711039</millis>
+  <nanos>372000</nanos>
+  <sequence>5</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Connection is closed</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:44.132447Z</date>
+  <millis>1734697724132</millis>
+  <nanos>447000</nanos>
+  <sequence>6</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Connection initiated with IP: 0:0:0:0:0:0:0:1</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:44.136631Z</date>
+  <millis>1734697724136</millis>
+  <nanos>631000</nanos>
+  <sequence>7</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Data saved in ./received_json/request_1734697724135.json</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:44.138849Z</date>
+  <millis>1734697724138</millis>
+  <nanos>849000</nanos>
+  <sequence>8</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Response from client: 200</message>
+</record>
+<record>
+  <date>2024-12-20T12:28:44.140552Z</date>
+  <millis>1734697724140</millis>
+  <nanos>552000</nanos>
+  <sequence>9</sequence>
+  <logger>NestApiLogger</logger>
+  <level>INFO</level>
+  <class>org.example.MyLogger</class>
+  <method>logInformation</method>
+  <thread>17</thread>
+  <message>Connection is closed</message>
+</record>
+</log>
+2024-12-20 13:32:07 [INFO] NestApiLogger: Server started2024-12-20 13:32:07 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:32:12 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:32:12 [INFO] NestApiLogger: Data saved in ./received_json/request_1734697932065.json2024-12-20 13:32:12 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:32:12 [INFO] NestApiLogger: Connection is closed2024-12-20 13:34:21 [INFO] NestApiLogger: Server started2024-12-20 13:34:21 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:34:51 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:34:51 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698091606.json2024-12-20 13:34:51 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:34:51 [INFO] NestApiLogger: Connection is closed2024-12-20 13:36:32 [INFO] NestApiLogger: Server started2024-12-20 13:36:32 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:36:35 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:36:35 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698195498.json2024-12-20 13:36:35 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:36:35 [INFO] NestApiLogger: Connection is closed2024-12-20 13:37:55 [INFO] NestApiLogger: Server started2024-12-20 13:37:55 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:37:58 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:37:58 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698278824.json2024-12-20 13:37:58 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:37:58 [INFO] NestApiLogger: Connection is closed2024-12-20 13:44:56 [INFO] NestApiLogger: Server started2024-12-20 13:44:56 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:45:00 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:45:00 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698700175.json2024-12-20 13:45:00 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:45:00 [INFO] NestApiLogger: Connection is closed2024-12-20 13:45:11 [INFO] NestApiLogger: Server started2024-12-20 13:45:11 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:45:13 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:45:13 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698713373.json2024-12-20 13:45:13 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:45:13 [INFO] NestApiLogger: Connection is closed2024-12-20 13:46:15 [INFO] NestApiLogger: Server started2024-12-20 13:46:15 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:46:21 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:46:21 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698781976.json2024-12-20 13:46:22 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:46:22 [INFO] NestApiLogger: Connection is closed2024-12-20 13:47:02 [INFO] NestApiLogger: Server started2024-12-20 13:47:02 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:47:05 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:47:05 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698825947.json2024-12-20 13:47:05 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:47:05 [INFO] NestApiLogger: Connection is closed2024-12-20 13:47:25 [INFO] NestApiLogger: Server started2024-12-20 13:47:25 [INFO] NestApiLogger: Server is listening on port: 84432024-12-20 13:47:28 [INFO] NestApiLogger: Connection initiated with IP: 0:0:0:0:0:0:0:12024-12-20 13:47:28 [INFO] NestApiLogger: Data saved in ./received_json/request_1734698848794.json2024-12-20 13:47:28 [INFO] NestApiLogger: Response from client: 2002024-12-20 13:47:28 [INFO] NestApiLogger: Connection is closed

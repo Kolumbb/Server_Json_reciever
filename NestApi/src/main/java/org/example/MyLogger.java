@@ -2,25 +2,32 @@ package org.example;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+import java.util.logging.*;
 
 public class MyLogger {
     public Logger logger;
     FileHandler fileHandler;
 
     public MyLogger(String fileName) throws IOException {
+        logger = Logger.getLogger("NestApiLogger");
         File file = new File(fileName);
         if(! file.exists()) file.createNewFile();
 
         fileHandler = new FileHandler(fileName, true);
-        logger = Logger.getLogger("NestApiLogger");
+        fileHandler.setFormatter(
+                new Formatter() {
+                    @Override
+                    public String format(LogRecord record) {
+                        return String.format("%1$tF %1$tT [%2$s] %3$s: %4$s",
+                                record.getMillis(), // Timestamp in YYYY-MM-DD HH:MM:SS format
+                                record.getLevel(),   // Log level (INFO, WARNING, etc.)
+                                record.getLoggerName(),  // Logger name
+                                record.getMessage());  // Log message
+                    }
+                }
+        );
         logger.addHandler(fileHandler);
-        logger.setLevel(Level.INFO);
-        SimpleFormatter formatter= new SimpleFormatter();
-        fileHandler.setFormatter(formatter);
+        //logger.setLevel(Level.INFO);
     }
 
     public void logInformation(Level level, String msg){
