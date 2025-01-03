@@ -27,12 +27,11 @@ public class MyLogger {
                 }
         );
         logger.addHandler(fileHandler);
-        //logger.setLevel(Level.INFO);
     }
 
     public void logInformation(Level level, String msg){
         logger.setLevel(level);
-        if (level == Level.INFO) logger.info(msg);
-        if (level == Level.WARNING) logger.warning(msg);
+        if (level == Level.INFO) logger.info(msg + System.lineSeparator());
+        if (level == Level.WARNING) logger.warning(msg + System.lineSeparator());
     }
 }
